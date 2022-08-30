@@ -1,0 +1,22 @@
+
+
+table{
+    border: 1px solid;
+}
+td{
+    color:#9e9d9d !important;
+    background: black;
+    font-size: 14px !important;
+}
+
+th{
+    font-size: 14px !important;
+    color:black !important;
+    background: #9e9d9d;
+    font-weight: bolder !important;
+}
+
+
+.dataTables_info{
+    color: white !important;
+}

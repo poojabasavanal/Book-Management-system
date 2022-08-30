@@ -1,0 +1,52 @@
+<div class="table-responsive margin_top">
+    <div id="tableSimple" class="col-lg-12 col-12 layout-spacing">
+      <div class="statbox widget box box-shadow">
+        <div class="widget-header">
+          <div class="row">
+            <div class="col-xl-8 col-md-8 col-sm-8 col-8">
+              <h4 class="margin_spacing">Feedback Details</h4>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-4 col-4">
+  
+            </div>
+          </div>
+        </div>
+        <div class="widget-content widget-content-area">
+          <div class="table-responsive">
+            <table class="table table-bordered mb-4" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+              <thead>
+                <tr>
+                  <th width="200px">Customer Name</th>
+                  <th>Email</th>
+                  <th >Feedback</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let item of booksdataList">
+                  <tr>
+                    <td>{{ item.Name }}</td>
+                    <td>{{ item.Email }}</td>
+                    <td>{{ item.Feedback1 }}</td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ngx-loading [show]="loading" [config]="{
+        backdropBackgroundColour: 'rgba(255,255,255,0.3)',
+        backdropBorderRadius: '10px',
+        primaryColour: '#ffffff',
+        secondaryColour: '#ffffff',
+        tertiaryColour: '#ffffff'
+      }" [template]="customLoadingTemplate"></ngx-loading>
+  
+  <ng-template #customLoadingTemplate>
+    <div class="custom-class">
+      <h3>Loading...</h3>
+    </div>
+  </ng-template>
